@@ -10,3 +10,5 @@ https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh
 4，由于不同数据集需要的feature map大小不同，整个代码写的比较乱，只有我能看懂。。。。
 
 5，但是结果还是很好的，比RoCo还要高，但是diffusion在噪声较大的场景下，生成的特征不好，可能是因为学习的样本就不行，生成的内容也就不行了。
+![image](https://github.com/user-attachments/assets/83ed8904-7f36-4914-9eb0-c1dedfbdc6c4)
+
