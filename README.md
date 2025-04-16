@@ -5,4 +5,6 @@
 2，记录训练过程，防止遗忘：
 https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh
 
-3，主要修改的文件就是两个，一个是'point_pillar_baseline_multiscale.py'还有一个是'diffusion_fuse.py'
+3，主要修改的文件就是两个，一个是'point_pillar_baseline_multiscale.py'还有一个是'diffusion_fuse.py'，其中`diffusion_fuse.py`的内容是，将单个车辆的特征当作条件来指导diffusion生成总特征的过程
+
+4，由于不同数据集需要的feature map大小不同，整个代码写的比较乱，只有我能看懂。。。。
