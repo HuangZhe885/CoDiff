@@ -2,6 +2,10 @@
 
 1，这个工作是在上次发表的RoCo文章的基础之上去尝试用diffusion解决协同感知中的噪声问题（位姿误差和时间延迟），正在审稿中，之前被拒了一次（审稿人问我可视化为什么是2D的）
 
+
+![image](https://github.com/user-attachments/assets/ec088148-7217-4110-88a8-02a75906da60)
+
+
 2，记录训练过程，防止遗忘：
 https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh
 
@@ -10,5 +14,6 @@ https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh
 4，由于不同数据集需要的feature map大小不同，整个代码写的比较乱，只有我能看懂。。。。
 
 5，但是结果还是很好的，比RoCo还要高，但是diffusion在噪声较大的场景下，生成的特征不好，可能是因为学习的样本就不行，生成的内容也就不行了。
+
 ![image](https://github.com/user-attachments/assets/83ed8904-7f36-4914-9eb0-c1dedfbdc6c4)
 
