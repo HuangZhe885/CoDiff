@@ -4,3 +4,5 @@
 
 2，记录训练过程，防止遗忘：
 https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh
+
+3，主要修改的文件就是两个，一个是'point_pillar_baseline_multiscale.py'还有一个是'diffusion_fuse.py'
