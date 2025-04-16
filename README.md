@@ -1,19 +1,19 @@
 # CoDiff: Conditional Diffusion Model for Collaborative 3D Object Detection
 
-1，这个工作是在上次发表的RoCo文章的基础之上去尝试用diffusion解决协同感知中的噪声问题（位姿误差和时间延迟），2024年7月做的
+1. This work builds upon the previously published RoCo paper, attempting to use diffusion models to address noise issues (pose errors and time delays) in collaborative perception. It was conducted in July 2024.  
 
+![image](https://github.com/user-attachments/assets/ec088148-7217-4110-88a8-02a75906da60)  
 
-![image](https://github.com/user-attachments/assets/ec088148-7217-4110-88a8-02a75906da60)
+2. Documenting the training process to avoid forgetting:  
+[Training Process Documentation](https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh)  
 
+3. The main modified files are:  
+   - `point_pillar_baseline_multiscale.py`  
+   - `diffusion_fuse.py` (which implements using single-vehicle features as conditions to guide the diffusion process for generating ensemble features)  
 
-2，记录训练过程，防止遗忘：
-https://lx2xygwjrgr.feishu.cn/docx/AgrcdAIuOoIR9zxdozUcpXPZndh
+4. Due to varying feature map size requirements across datasets, the code is quite messy... only I can understand it.  
 
-3，主要修改的文件就是两个，一个是`point_pillar_baseline_multiscale.py`还有一个是`diffusion_fuse.py`，其中`diffusion_fuse.py`的内容是，将单个车辆的特征当作条件来指导diffusion生成总特征的过程
-
-4，由于不同数据集需要的feature map大小不同，整个代码写的比较乱，只有我能看懂。。。。
-
-5，但是结果还是很好的，比RoCo还要高，但是diffusion在噪声较大的场景下，生成的特征不好，可能是因为学习的样本就不行，生成的内容也就不行了。
+5. Nevertheless, the results are promising - even outperforming RoCo. However, diffusion-generated features perform poorly in high-noise scenarios, likely because the model learns from suboptimal samples, leading to inferior outputs.  
 
 ![image](https://github.com/user-attachments/assets/83ed8904-7f36-4914-9eb0-c1dedfbdc6c4)
 
