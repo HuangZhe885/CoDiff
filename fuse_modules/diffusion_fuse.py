@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+# Author: Zhe Huang <2021000892@ruc.edu.cn>
+# License: TDG-Attribution-NonCommercial-NoDistrib
+
 import math
 import copy
 from pathlib import Path
@@ -145,7 +149,7 @@ def unnormalize_to_zero_to_one(t):
     return (t + 1) * 0.5
 
 # small helper modules
-# 残差连接
+# 
 class Residual(nn.Module):
     def __init__(self, fn):
         super().__init__()
@@ -512,13 +516,13 @@ class GaussianDiffusion(nn.Module):
         model: Unet,
         *,
         image_size = (64, 128),
-        channels = 256,  # 图像通道数
-        pred_objective = 'eps',   # 预测目标
+        channels = 256,  #
+        pred_objective = 'eps',   # 
         noise_schedule = logsnr_schedule_cosine,
         noise_d = None,
         noise_d_low = None,
         noise_d_high = None,
-        num_sample_steps = 500, # 采样步数
+        num_sample_steps = 500, # 
         clip_sample_denoised = True,
         min_snr_loss_weight = True,
         min_snr_gamma = 5
@@ -779,7 +783,7 @@ class GaussianDiffusion(nn.Module):
         return x_noised, log_snr
     
 
-    ## ws add ddim
+    ##  add ddim
     '''
     def _predict_eps_from_xstart(self, x_t, t, pred_xstart):
             return (
@@ -835,7 +839,7 @@ class GaussianDiffusion(nn.Module):
         sample = mean_pred + nonzero_mask * sigma * noise
         return {"sample": sample, "pred_xstart": out["pred_xstart"]}
     
-    ## ws add ddim
+    ## hz add ddim
     def ddim_reverse_sample(
         self,
         x,
@@ -866,7 +870,7 @@ class GaussianDiffusion(nn.Module):
 
         return {"sample": mean_pred, "pred_xstart": out["pred_xstart"]}
     
-    ## ws add ddim
+    ## hz add ddim
     def ddim_sample_loop(
         self,
         shape,
