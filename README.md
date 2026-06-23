@@ -1,4 +1,4 @@
-# CoDiff: Conditional Diffusion Model for Collaborative 3D Object Detection
+# Diffusion-Guided Feature Realignment for Robust Collaborative 3D Object Detection
 
 1. This work builds upon the previously published RoCo paper, attempting to use diffusion models to address noise issues (pose errors and time delays) in collaborative perception. It was conducted in July 2024.  
 
